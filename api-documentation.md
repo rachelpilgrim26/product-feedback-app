@@ -27,12 +27,11 @@ http://localhost:3000/get-all-suggestions
 
 **Example Response:**
 
-```
-
 Write the data returned by this endpoint.
 Think about its data type (String, Object, Array of Objects, etc.)
 Use spaces/indents to format the data if it is an array or object.
 
+```JSON
 
  [
 {
@@ -73,12 +72,13 @@ Write the example request URL here
 ```
 
 **Example Response:**
-
-```
-
 Write the data returned by this endpoint.
 Think about its data type (String, Object, Array of Objects, etc.)
 Use spaces/indents to format the data if it is an array or object.
+
+```JSON
+
+
 
 [
   {
@@ -108,19 +108,16 @@ http://localhost:3000/add-one-suggestion
 ```
 
 **Example Request Body:**
-
-```
-
 Write the data required in the request body.
 Think about its data type (String, Object, Array of Objects, etc.)
 Use spaces/indents to format the data if it is an array or object.
 
+```JSON
 {
   "feedback_title": "Change button color",
   "category": "UI",
   "feedback_detail": "The main button is hard to see. Make it a brighter color."
 }
-
 ```
 
 **Example Response:**
@@ -138,4 +135,19 @@ string
 
 ```
 Success! Suggestion has been added.
+```
+
+```css
+header {
+  font: roman;
+  font-size: 1rems;
+}
+```
+
+```html
+<h1>Hello world!</h1>
+```
+
+```js
+const header = "hello";
 ```
