@@ -1,6 +1,6 @@
 # 📘 Product Feedback API Documentation
 
-Base URL: `https://REPLACE-THIS-WITH-YOUR-DEPLOYED-URL.onrender.com`
+Base URL: `https://localhost:3000/.onrender.com`
 
 ## Overview
 
@@ -19,17 +19,12 @@ Base URL: `https://REPLACE-THIS-WITH-YOUR-DEPLOYED-URL.onrender.com`
 **Example Request URL:**
 
 ```
-Write the example request URL here
 
 http://localhost:3000/get-all-suggestions
 
 ```
 
 **Example Response:**
-
-Write the data returned by this endpoint.
-Think about its data type (String, Object, Array of Objects, etc.)
-Use spaces/indents to format the data if it is an array or object.
 
 ```JSON
 
@@ -60,21 +55,17 @@ Use spaces/indents to format the data if it is an array or object.
 
 ### 🔹 GET `/get-suggestions-by-category/:category`
 
-**Description:** Retrieves all suggestions in the database that match the selected category.**\*\*\*\***\_\_\_**\*\*\*\***
+**Description:** Retrieves all suggestions in the database that match the selected category.
 
 **Example Request URL:**
+
+```
+
 http://localhost:3000/get-suggestions-by-category/UX
 
 ```
 
-Write the example request URL here
-
-```
-
 **Example Response:**
-Write the data returned by this endpoint.
-Think about its data type (String, Object, Array of Objects, etc.)
-Use spaces/indents to format the data if it is an array or object.
 
 ```JSON
 
@@ -95,22 +86,15 @@ Use spaces/indents to format the data if it is an array or object.
 
 ### 🔹 POST `/add-one-suggestion`
 
-**Description:** Adds a new suggestion to the database.**\*\*\*\***\_\_\_**\*\*\*\***
+**Description:**
 
 **Example Request URL:**
 
 ```
-
-Write the example request URL here
-
 http://localhost:3000/add-one-suggestion
-
 ```
 
 **Example Request Body:**
-Write the data required in the request body.
-Think about its data type (String, Object, Array of Objects, etc.)
-Use spaces/indents to format the data if it is an array or object.
 
 ```JSON
 {
@@ -121,33 +105,8 @@ Use spaces/indents to format the data if it is an array or object.
 ```
 
 **Example Response:**
+
+```
+
 Success! Suggestion has been added.
-
-```
-
-Write the data returned by this endpoint.
-Think about its data type (String, Object, Array of Objects, etc.)
-Use spaces/indents to format the data if it is an array or object.
-
-```
-
-string
-
-```
-Success! Suggestion has been added.
-```
-
-```css
-header {
-  font: roman;
-  font-size: 1rems;
-}
-```
-
-```html
-<h1>Hello world!</h1>
-```
-
-```js
-const header = "hello";
 ```
