@@ -52,6 +52,10 @@ export default function AddFeedback() {
       </div>
 
       <section className="add-feedback-card">
+        <div className="add-feedback-icon-circle">
+          <span className="add-feedback-icon-plus">+</span>
+        </div>
+
         <h2 className="add-feedback-title">Create New Feedback</h2>
 
         <form
@@ -96,7 +100,7 @@ export default function AddFeedback() {
               className="form-textarea"
               value={formData.feedbackDetail}
               onChange={handleChange}
-              placeholder="Include specific comments on what should be improved or added."
+              placeholder="Include any specific comments on what should be improved, added, etc."
               required
             />
           </label>

@@ -1,4 +1,3 @@
-// src/pages/Home.jsx
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import SuggestionCard from "../components/SuggestionCard.jsx";
@@ -7,19 +6,21 @@ import emptyIllustration from "../assets/suggestions/illustration-empty.svg";
 import bgHeaderDesktop from "../assets/suggestions/desktop/background-header.png";
 
 export default function Home({ suggestions }) {
-  const suggestionsArray = Array.isArray(suggestions) ? suggestions : [];
+  const list = Array.isArray(suggestions) ? suggestions : [];
+
   const [selectedCategory, setSelectedCategory] = useState("All");
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const categoryOptions = ["All", "UI", "UX", "Enhancement", "Bug", "Feature"];
+  const categories = ["All", "UI", "UX", "Enhancement", "Bug", "Feature"];
 
-  let filteredSuggestionsArray = [];
+  const filteredList =
+    selectedCategory === "All"
+      ? list
+      : list.filter((item) => item.category === selectedCategory);
 
-  if (selectedCategory === "All") {
-    filteredSuggestionsArray = suggestionsArray;
-  } else {
-    filteredSuggestionsArray = suggestionsArray.filter((suggestionItem) => {
-      return suggestionItem.category === selectedCategory;
-    });
+  function handleCategoryClick(categoryName) {
+    setSelectedCategory(categoryName);
+    setIsMenuOpen(false);
   }
 
   return (
@@ -35,13 +36,24 @@ export default function Home({ suggestions }) {
               backgroundPosition: "center",
             }}
           >
-            <h2 className="board-title">My Company</h2>
-            <p className="board-subtitle">Feedback Board</p>
+            <div className="board-header">
+              <div>
+                <h2 className="board-title">My Company</h2>
+                <p className="board-subtitle">Feedback Board</p>
+              </div>
+
+              <button
+                className="hamburger-button"
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+              >
+                ☰
+              </button>
+            </div>
           </div>
 
-          <div className="filter-card">
+          <div className="filter-card desktop-filter">
             <div className="category-row">
-              {categoryOptions.map((categoryName) => (
+              {categories.map((categoryName) => (
                 <button
                   key={categoryName}
                   className={
@@ -56,25 +68,44 @@ export default function Home({ suggestions }) {
               ))}
             </div>
           </div>
+
+          {isMenuOpen && (
+            <div className="filter-card mobile-filter">
+              <div className="category-row">
+                {categories.map((categoryName) => (
+                  <button
+                    key={categoryName}
+                    className={
+                      categoryName === selectedCategory
+                        ? "category-button category-button-selected"
+                        : "category-button"
+                    }
+                    onClick={() => handleCategoryClick(categoryName)}
+                  >
+                    {categoryName}
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
 
         <div className="home-main">
           <div className="top-bar">
-            <h2 className="top-bar-title">
-              {filteredSuggestionsArray.length} Suggestions
-            </h2>
+            <h2 className="top-bar-title">{filteredList.length} Suggestions</h2>
+
             <Link to="/add-feedback" className="add-feedback-button">
               <img src={addFeedbackIcon} alt="" className="add-feedback-icon" />
-              Add Feedback
+              <span>Add Feedback</span>
             </Link>
           </div>
 
           <div className="suggestions-list">
-            {filteredSuggestionsArray.length === 0 && (
+            {filteredList.length === 0 && (
               <div className="no-feedback">
                 <img
                   src={emptyIllustration}
-                  alt="a little man with a microscope"
+                  alt=""
                   className="empty-illustration"
                 />
                 <h3>There is no feedback yet.</h3>
@@ -82,9 +113,9 @@ export default function Home({ suggestions }) {
               </div>
             )}
 
-            {filteredSuggestionsArray.map((suggestionItem) => (
-              <div className="suggestion-item" key={suggestionItem.id}>
-                <SuggestionCard suggestion={suggestionItem} />
+            {filteredList.map((item, index) => (
+              <div className="suggestion-item" key={index}>
+                <SuggestionCard suggestion={item} />
               </div>
             ))}
           </div>
