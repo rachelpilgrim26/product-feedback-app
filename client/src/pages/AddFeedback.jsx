@@ -19,7 +19,7 @@ export default function AddFeedback() {
       feedback_detail: formData.feedbackDetail,
     };
 
-    await fetch("http://localhost:3000/add-one-suggestion", {
+    await fetch("api/add-one-suggestion", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newSuggestion),
