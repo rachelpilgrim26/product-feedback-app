@@ -10,6 +10,14 @@ Check out the app:
 (https://product-feedback-app-2025.netlify.app/)
 
 🖼️ Screenshots
+Desktop
+<img width="1166" height="573" alt="image" src="https://github.com/user-attachments/assets/8c28ad60-4aa8-4013-8845-d3fa6d33f3b4" />
+Tablet
+<img width="822" height="595" alt="image" src="https://github.com/user-attachments/assets/8b9f8303-01e3-4ac5-badf-be88a34119dc" />
+Mobile
+<img width="547" height="581" alt="image" src="https://github.com/user-attachments/assets/464a9be7-0357-4e82-9486-6a8f2f9e5f6a" />
+
+
 
 
 ✨ Features
