@@ -8,7 +8,7 @@ export default function App() {
 
   async function pull() {
     try {
-      const response = await fetch("http://localhost:3000/get-all-suggestions");
+      const response = await fetch("api/get-all-suggestions");
       const suggestionsFromApi = await response.json();
       setList(Array.isArray(suggestionsFromApi) ? suggestionsFromApi : []);
     } catch {
