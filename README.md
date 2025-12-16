@@ -1,57 +1,58 @@
 # Product Feedback Full-Stack App
 
-📌 Project Description & Purpose
+## 📌 Project Description & Purpose
 
 This project is a full-stack Product Feedback Board designed to help users submit, browse, and categorize feedback for a company or product. It includes a clean Home page that lists all suggestions, category filters for quick sorting, and a dedicated form for adding new feedback. Each suggestion is displayed inside a styled card component, making the board easy to scan and interact with.
 
-🚀 Live Site
+## 🚀 Live Site [Check out the app:](https://product-feedback-app-2025.netlify.app/)
 
-Check out the app:
-(https://product-feedback-app-2025.netlify.app/)
+## 🖼️ Screenshots
 
-🖼️ Screenshots
-Desktop
+### Desktop
+
 <img width="1166" height="573" alt="image" src="https://github.com/user-attachments/assets/8c28ad60-4aa8-4013-8845-d3fa6d33f3b4" />
-Tablet
+
+### Tablet
+
 <img width="822" height="595" alt="image" src="https://github.com/user-attachments/assets/8b9f8303-01e3-4ac5-badf-be88a34119dc" />
-Mobile
+
+### Mobile
+
 <img width="547" height="581" alt="image" src="https://github.com/user-attachments/assets/464a9be7-0357-4e82-9486-6a8f2f9e5f6a" />
 
+## ✨ Features
 
+1. This is what you can do on the app:
+1. Browse all feedback suggestions in a clean, organized layout
+1. Filter suggestions by category (UI, UX, Feature, Bug, Enhancement, or All)
+1. Add new feedback through a fully controlled form
+1. Automatically return to the Home page after submitting
+1. View suggestions inside reusable card components
+1. See a friendly empty-state graphic when no feedback exists
+1. Enjoy smooth navigation using React Router
 
+## 🛠️ Tech Stack
 
-✨ Features
-
-- This is what you can do on the app:
-- Browse all feedback suggestions in a clean, organized layout
-- Filter suggestions by category (UI, UX, Feature, Bug, Enhancement, or All)
-- Add new feedback through a fully controlled form
-- Automatically return to the Home page after submitting
-- View suggestions inside reusable card components
-- See a friendly empty-state graphic when no feedback exists
-- Enjoy smooth navigation using React Router
-
-🛠️ Tech Stack
-Frontend
+### Frontend
 
 - Languages: JavaScript, HTML, CSS
 - Framework: React
 - Routing: React Router
 - Deployment: Netlify
 
-Server / API
+### Server / API
 
 - Language: JavaScript (Node.js)
 - Framework: Express
 - Endpoints: GET + POST for managing suggestions
 - Deployment: Render
 
-Database
+### Database
 
-- Language: SQL DB fiddle [https://www.db-fiddle.com/f/nNLWQEWEkUdLZuHyjGdVW6/0]
+- Language: [SQL DB fiddle](https://www.db-fiddle.com/f/nNLWQEWEkUdLZuHyjGdVW6/0)
 - Deployment: Neon
 
-🔹 API Documentation
+## 🔹 API Documentation
 
 These are the API endpoints used in the app:
 
@@ -71,9 +72,9 @@ These are the API endpoints used in the app:
 
 ```
 
-API documentation [[API Documentation](../api-documentation.md)]
+## API documentation [[API Documentation](../api-documentation.md)]
 
-🗄️ Database Schema
+## 🗄️ Database Schema
 
 ```SQL
 CREATE TABLE suggestions (
@@ -85,7 +86,8 @@ CREATE TABLE suggestions (
 );
 ```
 
-💭 Reflections
+### 💭 Reflections
+
 What I learned:
 
 I learned how to build a full-stack workflow using React on the frontend and Express on the backend. I practiced controlled forms, filtering data, making fetch requests, and using dynamic routing. Seeing everything come together — frontend, backend, and UI — really helped solidify how full-stack apps are built.
@@ -98,7 +100,7 @@ What challenged me:
 
 Getting the frontend and backend communicating correctly was the biggest challenge. Debugging fetch requests, managing state, and making sure the app updated in real time pushed me to think deeply and problem-solve.
 
-Future improvements I’d love to build:
+### Future improvements I’d love to build:
 
 1. 👍 Add upvote functionality
 2. ✏️ Add edit & delete feedback
@@ -107,7 +109,7 @@ Future improvements I’d love to build:
 5. 👤 Add user authentication
 6. 📱 Improve mobile responsiveness & animations
 
-🙌 Credits & Shoutouts
+### 🙌 Credits & Shoutouts
 
 Huge thank you to Arianna for guiding and supporting me through this project.
 Big shoutout to AnnieCannons for the structure and opportunity to build real applications.
